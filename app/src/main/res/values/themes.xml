@@ -16,6 +16,10 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="Theme.MakanYuk.SplashScreen">
+        <item name="android:statusBarColor">@color/white</item>
+    </style>
+
     <style name="TextView.PoppinsNormal" parent="Widget.AppCompat.TextView">
         <item name="android:fontFamily">@font/poppins</item>
         <item name="android:textColor">@color/black</item>

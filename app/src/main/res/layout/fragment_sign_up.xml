@@ -87,7 +87,7 @@
             android:backgroundTint="@color/yellow_dark"
             android:fontFamily="@font/poppins"
             android:padding="12dp"
-            android:text="@string/continue"
+            android:text="Continue"
             android:textAllCaps="false"
             android:textColor="@color/black"
             android:textStyle="bold"

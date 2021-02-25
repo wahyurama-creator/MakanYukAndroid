@@ -5,16 +5,17 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
-import com.dev.makanyuk.MainActivity
 import com.dev.makanyuk.R
+import com.dev.makanyuk.ui.auth.AuthActivity
 
 class SplashScreenActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
 
-        Handler(Looper.getMainLooper()).postDelayed(Runnable {
-            startActivity(Intent(this, MainActivity::class.java))
+        val handler = Handler(Looper.getMainLooper())
+        handler.postDelayed({
+            startActivity(Intent(this, AuthActivity::class.java))
         }, 4000)
     }
 }
