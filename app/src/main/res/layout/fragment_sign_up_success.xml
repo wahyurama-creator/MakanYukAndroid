@@ -18,7 +18,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.40" />
+        app:layout_constraintVertical_bias="0.30" />
 
     <TextView
         android:id="@+id/textView4"
@@ -38,6 +38,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:lineSpacingExtra="-3dp"
         android:text="Now you are able to order\nsome foods as a self-reward"
         android:textAlignment="center"
         android:textColor="@color/gray"
