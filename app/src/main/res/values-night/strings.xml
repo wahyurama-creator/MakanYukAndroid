@@ -17,4 +17,5 @@
     <string name="type_your_password">Type your password</string>
     <string name="sign_in">Sign In</string>
     <string name="register_new_account">Register New Account</string>
+    <string name="yeay_completed">Yeay! Completed</string>
 </resources>
