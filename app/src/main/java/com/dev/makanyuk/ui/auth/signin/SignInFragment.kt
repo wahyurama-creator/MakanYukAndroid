@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.dev.makanyuk.R
+import com.dev.makanyuk.ui.MainActivity
 import com.dev.makanyuk.ui.auth.AuthActivity
 import kotlinx.android.synthetic.main.fragment_sign_in.*
 
@@ -27,6 +28,12 @@ class SignInFragment : Fragment() {
             val signUp = Intent(activity, AuthActivity::class.java)
             signUp.putExtra("page_request", 2)
             startActivity(signUp)
+        }
+
+        btn_sign_in.setOnClickListener {
+            val home = Intent(activity, MainActivity::class.java)
+            startActivity(home)
+            activity?.finish()
         }
     }
 }

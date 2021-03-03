@@ -20,4 +20,8 @@
     <string name="sign_in">Sign In</string>
     <string name="register_new_account">Register New Account</string>
     <string name="yeay_completed">Yeay! Completed</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Order</string>
+    <string name="title_notifications">Profile</string>
 </resources>
