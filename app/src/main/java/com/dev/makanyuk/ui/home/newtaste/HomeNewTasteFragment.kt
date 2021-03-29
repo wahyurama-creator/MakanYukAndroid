@@ -1,5 +1,6 @@
 package com.dev.makanyuk.ui.home.newtaste
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.dev.makanyuk.R
 import com.dev.makanyuk.model.dummy.HomeVerticalModel
+import com.dev.makanyuk.ui.detail.DetailActivity
 import kotlinx.android.synthetic.main.fragment_home_new_taste.*
 
 class HomeNewTasteFragment : Fragment(), HomeNewTasteAdapter.ItemAdapterCallback {
@@ -33,7 +35,7 @@ class HomeNewTasteFragment : Fragment(), HomeNewTasteAdapter.ItemAdapterCallback
         rv_list.adapter = adapter
     }
 
-    fun initDataDummy() {
+    private fun initDataDummy() {
         foodList = ArrayList()
         foodList.add(HomeVerticalModel("Nasi Goreng", "20000", "", 4f))
         foodList.add(HomeVerticalModel("Nasi Goreng", "15000", "", 5f))
@@ -42,6 +44,6 @@ class HomeNewTasteFragment : Fragment(), HomeNewTasteAdapter.ItemAdapterCallback
     }
 
     override fun onClick(view: View, data: HomeVerticalModel) {
-
+        startActivity(Intent(activity, DetailActivity::class.java))
     }
 }

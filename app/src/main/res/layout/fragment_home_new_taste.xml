@@ -14,7 +14,7 @@
         android:background="@color/white"
         android:clipChildren="true"
         android:clipToPadding="true"
-        android:paddingBottom="50dp"
+        android:paddingBottom="58dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
