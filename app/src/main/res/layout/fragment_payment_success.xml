@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".ui.detail.PaymentSuccessFragment">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ilustration_payment_success" />
+
+    <TextView
+        style="@style/TextView.PoppinsNormal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="You've Made Order"
+        android:textSize="20sp" />
+
+    <TextView
+        style="@style/TextView.PoppinsLight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:gravity="center"
+        android:lineSpacingExtra="-3dp"
+        android:text="Just stay at home while we are\npreparing your best foods"
+        android:textColor="@color/gray" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_order"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/yellow_dark"
+        android:fontFamily="@font/poppins"
+        android:padding="12dp"
+        android:text="Order Other Foods"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:cornerRadius="8dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_view_order"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="@color/gray"
+        android:fontFamily="@font/poppins"
+        android:padding="12dp"
+        android:text="View My Order"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:cornerRadius="8dp" />
+
+</LinearLayout>
