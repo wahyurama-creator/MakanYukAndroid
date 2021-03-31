@@ -15,6 +15,7 @@ class HttpClient {
     private var endpoint: Endpoint? = null
 
     companion object {
+        private const val AUTHORIZATION = "Authorization"
         private val mInstance: HttpClient = HttpClient()
 
         @Synchronized
@@ -50,7 +51,7 @@ class HttpClient {
             builder.addInterceptor(interceptor)
         }
         if (token != null) {
-            builder.addInterceptor(getInterceptorWithHeader("Authorization", "Bearer $token"))
+            builder.addInterceptor(getInterceptorWithHeader(AUTHORIZATION, "Bearer $token"))
         }
 
         val okHttpClient = builder.build()
@@ -63,7 +64,7 @@ class HttpClient {
         endpoint = null
     }
 
-    fun getInterceptorWithHeader(headerName: String, headerValue: String): Interceptor {
+    private fun getInterceptorWithHeader(headerName: String, headerValue: String): Interceptor {
         val header = HashMap<String, String>()
         header.put(headerName, headerValue)
         return getInterceptorWithHeader(header)
