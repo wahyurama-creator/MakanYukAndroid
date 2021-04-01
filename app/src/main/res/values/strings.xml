@@ -24,4 +24,7 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Order</string>
     <string name="title_notifications">Profile</string>
+    <string name="email_validation">Email must be filled</string>
+    <string name="password_validation">Password must be filled</string>
+    <string name="email_valid">Email is not valid</string>
 </resources>
