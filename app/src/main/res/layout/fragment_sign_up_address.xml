@@ -35,7 +35,7 @@
             android:background="@drawable/bg_button"
             android:hint="@string/type_your_phone_number"
             android:importantForAutofill="no"
-            android:inputType="phone" />
+            android:inputType="phone|number" />
 
         <TextView
             style="@style/TextView.PoppinsNormal"
@@ -73,14 +73,14 @@
             android:background="@drawable/bg_button"
             android:hint="@string/type_your_house_number"
             android:importantForAutofill="no"
-            android:inputType="number" />
+            android:inputType="number|text" />
 
         <TextView
             style="@style/TextView.PoppinsNormal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="@string/house_number"
+            android:text="@string/city"
             android:textSize="16sp" />
 
         <EditText

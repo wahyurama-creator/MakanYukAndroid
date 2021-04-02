@@ -29,7 +29,7 @@ class SignInPresenter(private val v: SignInContract.View) : SignInContract.Prese
     }
 
     override fun subscribe() {
-        TODO("Not yet implemented")
+
     }
 
     override fun unSubscribe() {

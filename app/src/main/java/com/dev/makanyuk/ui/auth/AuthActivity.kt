@@ -27,7 +27,7 @@ class AuthActivity : AppCompatActivity() {
         }
     }
 
-    fun toolbarSignUp() {
+    private fun toolbarSignUp() {
         toolbar.title = "Sign Up"
         toolbar.subtitle = "Register and eat"
         toolbar.navigationIcon = resources.getDrawable(R.drawable.ic_back, null)

@@ -9,10 +9,11 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:usesCleartextTraffic="true"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MakanYuk">
+        android:theme="@style/Theme.MakanYuk"
+        android:usesCleartextTraffic="true">
         <activity android:name=".ui.detail.DetailActivity" />
         <activity android:name=".ui.MainActivity" />
         <activity android:name=".ui.auth.AuthActivity" />

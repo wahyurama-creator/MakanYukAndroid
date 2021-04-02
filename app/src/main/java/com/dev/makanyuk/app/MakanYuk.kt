@@ -21,7 +21,7 @@ class MakanYuk : MultiDexApplication() {
         mInstance = this
     }
 
-    fun getPreferences(): SharedPreferences {
+    private fun getPreferences(): SharedPreferences {
         return PreferenceManager.getDefaultSharedPreferences(this)
     }
 

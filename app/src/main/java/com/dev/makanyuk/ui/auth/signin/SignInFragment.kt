@@ -32,11 +32,11 @@ class SignInFragment : Fragment(), SignInContract.View {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        if (!MakanYuk.getApp().getToken().isNullOrEmpty()) {
-            val home = Intent(activity, MainActivity::class.java)
-            startActivity(home)
-            activity?.finish()
-        }
+//        if (!MakanYuk.getApp().getToken().isNullOrEmpty()) {
+//            val home = Intent(activity, MainActivity::class.java)
+//            startActivity(home)
+//            activity?.finish()
+//        }
 
         signInPresenter = SignInPresenter(this)
         initView()

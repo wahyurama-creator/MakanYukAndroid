@@ -1,7 +1,10 @@
 package com.dev.makanyuk.network
 
+import android.util.Log
 import com.dev.makanyuk.BuildConfig
+import com.dev.makanyuk.app.MakanYuk
 import com.dev.makanyuk.utils.Helpers
+import com.readystatesoftware.chuck.ChuckInterceptor
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -16,6 +19,7 @@ class HttpClient {
 
     companion object {
         private const val AUTHORIZATION = "Authorization"
+        private val TAG = HttpClient::class.java.simpleName
         private val mInstance: HttpClient = HttpClient()
 
         @Synchronized
@@ -36,7 +40,7 @@ class HttpClient {
     }
 
     private fun buildRetrofitClient() {
-        val token = ""
+        val token = MakanYuk.getApp().getToken()
         buildRetrofitClient(token)
     }
 
@@ -49,6 +53,7 @@ class HttpClient {
             val interceptor = HttpLoggingInterceptor()
             interceptor.level = HttpLoggingInterceptor.Level.BODY
             builder.addInterceptor(interceptor)
+            builder.addInterceptor(ChuckInterceptor(MakanYuk.getApp()))
         }
         if (token != null) {
             builder.addInterceptor(getInterceptorWithHeader(AUTHORIZATION, "Bearer $token"))
@@ -62,6 +67,7 @@ class HttpClient {
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .build()
         endpoint = null
+        Log.v(TAG, token.toString())
     }
 
     private fun getInterceptorWithHeader(headerName: String, headerValue: String): Interceptor {
