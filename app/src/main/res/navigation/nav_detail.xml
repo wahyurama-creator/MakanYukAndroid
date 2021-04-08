@@ -13,6 +13,11 @@
         <action
             android:id="@+id/action_detailFragment_to_paymentFragment"
             app:destination="@id/paymentFragment" />
+        <argument
+            android:name="extra_data"
+            android:defaultValue="@null"
+            app:argType="com.dev.makanyuk.model.response.home.Data"
+            app:nullable="true" />
     </fragment>
     <fragment
         android:id="@+id/paymentFragment"

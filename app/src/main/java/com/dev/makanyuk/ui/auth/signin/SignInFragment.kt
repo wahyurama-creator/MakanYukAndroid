@@ -12,6 +12,8 @@ import com.dev.makanyuk.app.MakanYuk
 import com.dev.makanyuk.model.response.login.LoginResponse
 import com.dev.makanyuk.ui.MainActivity
 import com.dev.makanyuk.ui.auth.AuthActivity
+import com.dev.makanyuk.ui.auth.signin.api.SignInContract
+import com.dev.makanyuk.ui.auth.signin.api.SignInPresenter
 import com.google.android.material.snackbar.Snackbar
 import com.google.gson.Gson
 import kotlinx.android.synthetic.main.fragment_sign_in.*

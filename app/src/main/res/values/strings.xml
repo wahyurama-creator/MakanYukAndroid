@@ -29,4 +29,16 @@
     <string name="name_validation">Name must be filled</string>
     <string name="email_valid">Email is not valid</string>
     <string name="city">City</string>
+    <string name="new_taste">New Taste</string>
+    <string name="popular">Popular</string>
+    <string name="recommended">Recommended</string>
+    <string name="ingredients">Ingredients:</string>
+    <string name="total_price">Total Price:</string>
+    <string name="order_now">Order Now</string>
+    <string name="item_ordered">Item Ordered</string>
+    <string name="details_transaction">Details Transaction</string>
+    <string name="driver">Driver</string>
+    <string name="tax_10">Tax 10%</string>
+    <string name="deliver_to">Deliver to:</string>
+    <string name="checkout_now">Checkout Now</string>
 </resources>

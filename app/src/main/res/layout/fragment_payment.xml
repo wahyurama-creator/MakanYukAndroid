@@ -30,7 +30,7 @@
                 style="@style/TextView.PoppinsNormal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Item Ordered"
+                android:text="@string/item_ordered"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/constraintLayout" />
 
@@ -39,6 +39,7 @@
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_marginTop="12dp"
+                android:contentDescription="@string/app_name"
                 android:scaleType="centerCrop"
                 android:src="@drawable/fried_rice"
                 app:layout_constraintStart_toStartOf="parent"
@@ -51,10 +52,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
                 android:layout_marginTop="8dp"
-                android:text="Nasi Goreng"
                 android:textSize="16sp"
                 app:layout_constraintStart_toEndOf="@id/iv_picture"
-                app:layout_constraintTop_toTopOf="@+id/iv_picture" />
+                app:layout_constraintTop_toTopOf="@+id/iv_picture"
+                tools:text="Nasi Goreng" />
 
             <TextView
                 android:id="@+id/tv_price"
@@ -62,23 +63,23 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
-                android:text="IDR 123.456"
                 android:textColor="@color/gray"
                 android:textSize="13sp"
                 app:layout_constraintStart_toEndOf="@+id/iv_picture"
-                app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_title"
+                tools:text="IDR 123.456" />
 
             <TextView
                 android:id="@+id/tv_count"
                 style="@style/TextView.PoppinsLight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="14 items"
                 android:textColor="@color/gray"
                 android:textSize="13sp"
                 app:layout_constraintBottom_toBottomOf="@+id/tv_price"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/tv_title" />
+                app:layout_constraintTop_toTopOf="@+id/tv_title"
+                tools:text="14 items" />
 
             <TextView
                 android:id="@+id/textView2"
@@ -86,7 +87,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="Details Transaction"
+                android:text="@string/details_transaction"
                 app:layout_constraintStart_toStartOf="@id/constraintLayout"
                 app:layout_constraintTop_toBottomOf="@id/iv_picture" />
 
@@ -96,10 +97,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="Nasi Goreng"
                 android:textColor="@color/gray"
                 app:layout_constraintStart_toStartOf="@id/constraintLayout"
-                app:layout_constraintTop_toBottomOf="@id/textView2" />
+                app:layout_constraintTop_toBottomOf="@id/textView2"
+                tools:text="Nasi Goreng" />
 
             <TextView
                 android:id="@+id/tv_item_price"
@@ -107,9 +108,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="end"
-                android:text="IDR 123.456"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/tv_item_title" />
+                app:layout_constraintTop_toTopOf="@+id/tv_item_title"
+                tools:text="IDR 123.456" />
 
             <TextView
                 android:id="@+id/tv_item_driver"
@@ -117,7 +118,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:text="Driver"
+                android:text="@string/driver"
                 android:textColor="@color/gray"
                 app:layout_constraintStart_toStartOf="@id/constraintLayout"
                 app:layout_constraintTop_toBottomOf="@id/tv_item_title" />
@@ -128,9 +129,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="end"
-                android:text="IDR 10.000"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/tv_item_driver" />
+                app:layout_constraintTop_toTopOf="@+id/tv_item_driver"
+                tools:text="IDR 10.000" />
 
             <TextView
                 android:id="@+id/tv_item_tax"
@@ -138,7 +139,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:text="Tax 10%"
+                android:text="@string/tax_10"
                 android:textColor="@color/gray"
                 app:layout_constraintStart_toStartOf="@id/constraintLayout"
                 app:layout_constraintTop_toBottomOf="@id/tv_item_driver" />
@@ -149,9 +150,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="end"
-                android:text="IDR 20.000"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/tv_item_tax" />
+                app:layout_constraintTop_toTopOf="@+id/tv_item_tax"
+                tools:text="IDR 20.000" />
 
             <TextView
                 android:id="@+id/tv_item_total"
@@ -159,7 +160,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:text="Total Price"
+                android:text="@string/total_price"
                 android:textColor="@color/gray"
                 app:layout_constraintStart_toStartOf="@id/constraintLayout"
                 app:layout_constraintTop_toBottomOf="@id/tv_item_tax" />
@@ -170,10 +171,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="end"
-                android:text="IDR 123.456"
                 android:textColor="@color/green"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/tv_item_total" />
+                app:layout_constraintTop_toTopOf="@+id/tv_item_total"
+                tools:text="IDR 123.456" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -193,7 +194,7 @@
                 style="@style/TextView.PoppinsNormal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Deliver to:"
+                android:text="@string/deliver_to"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -203,7 +204,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="Name"
+                android:text="@string/full_name"
                 android:textColor="@color/gray"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/textView3" />
@@ -214,9 +215,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="end"
-                android:text="Alexa"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/textView4" />
+                app:layout_constraintTop_toTopOf="@+id/textView4"
+                tools:text="Alexa" />
 
             <TextView
                 android:id="@+id/textView5"
@@ -224,7 +225,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:text="Phone No"
+                android:text="@string/phone_number"
                 android:textColor="@color/gray"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/textView4" />
@@ -235,9 +236,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="end"
-                android:text="081215478273"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/textView5" />
+                app:layout_constraintTop_toTopOf="@+id/textView5"
+                tools:text="081215478273" />
 
             <TextView
                 android:id="@+id/textView6"
@@ -245,7 +246,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:text="Address"
+                android:text="@string/home_address"
                 android:textColor="@color/gray"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/textView5" />
@@ -256,9 +257,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="end"
-                android:text="Jl Medoho 1"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/textView6" />
+                app:layout_constraintTop_toTopOf="@+id/textView6"
+                tools:text="Jl Medoho 1" />
 
             <TextView
                 android:id="@+id/textView7"
@@ -266,7 +267,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:text="House No"
+                android:text="@string/house_number"
                 android:textColor="@color/gray"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/textView6" />
@@ -277,9 +278,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="end"
-                android:text="32 A"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/textView7" />
+                app:layout_constraintTop_toTopOf="@+id/textView7"
+                tools:text="32 A" />
 
             <TextView
                 android:id="@+id/textView8"
@@ -287,7 +288,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:text="City"
+                android:text="@string/city"
                 android:textColor="@color/gray"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/textView7" />
@@ -298,9 +299,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="end"
-                android:text="Semarang"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/textView8" />
+                app:layout_constraintTop_toTopOf="@+id/textView8"
+                tools:text="Semarang" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -315,7 +316,7 @@
             android:backgroundTint="@color/yellow_dark"
             android:fontFamily="@font/poppins"
             android:padding="12dp"
-            android:text="Checkout Now"
+            android:text="@string/checkout_now"
             android:textAllCaps="false"
             android:textColor="@color/black"
             android:textStyle="bold"

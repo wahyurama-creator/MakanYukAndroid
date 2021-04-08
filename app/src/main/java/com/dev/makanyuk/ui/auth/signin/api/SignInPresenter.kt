@@ -1,4 +1,4 @@
-package com.dev.makanyuk.ui.auth.signin
+package com.dev.makanyuk.ui.auth.signin.api
 
 import com.dev.makanyuk.network.HttpClient
 import io.reactivex.android.schedulers.AndroidSchedulers

@@ -9,13 +9,15 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.dev.makanyuk.R
-import com.dev.makanyuk.model.dummy.HomeVerticalModel
+import com.dev.makanyuk.model.response.home.Data
 import com.dev.makanyuk.ui.detail.DetailActivity
+import com.dev.makanyuk.ui.home.viewpager.SectionPagerAdapter.Companion.EXTRA_DATA
 import kotlinx.android.synthetic.main.fragment_home_new_taste.*
 
 class HomeNewTasteFragment : Fragment(), HomeNewTasteAdapter.ItemAdapterCallback {
 
-    private var foodList: ArrayList<HomeVerticalModel> = ArrayList()
+
+    private var newTasteList: ArrayList<Data> = ArrayList()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -28,22 +30,17 @@ class HomeNewTasteFragment : Fragment(), HomeNewTasteAdapter.ItemAdapterCallback
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        initDataDummy()
-        val adapter = HomeNewTasteAdapter(foodList, this)
+        newTasteList = arguments?.getParcelableArrayList(EXTRA_DATA)!!
+
+        val adapter = HomeNewTasteAdapter(newTasteList, this)
         val layoutManager: RecyclerView.LayoutManager = LinearLayoutManager(context)
         rv_list.layoutManager = layoutManager
         rv_list.adapter = adapter
     }
 
-    private fun initDataDummy() {
-        foodList = ArrayList()
-        foodList.add(HomeVerticalModel("Nasi Goreng", "20000", "", 4f))
-        foodList.add(HomeVerticalModel("Nasi Goreng", "15000", "", 5f))
-        foodList.add(HomeVerticalModel("Nasi Goreng", "30000", "", 3f))
-        foodList.add(HomeVerticalModel("Nasi Goreng", "10000", "", 4f))
-    }
-
-    override fun onClick(view: View, data: HomeVerticalModel) {
-        startActivity(Intent(activity, DetailActivity::class.java))
+    override fun onClick(view: View, data: Data) {
+        val intent = Intent(activity, DetailActivity::class.java)
+        intent.putExtra(EXTRA_DATA, data)
+        startActivity(intent)
     }
 }

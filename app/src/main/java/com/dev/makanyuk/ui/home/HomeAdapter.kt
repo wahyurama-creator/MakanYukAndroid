@@ -4,12 +4,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.dev.makanyuk.R
-import com.dev.makanyuk.model.dummy.HomeModel
+import com.dev.makanyuk.model.response.home.Data
+import com.dev.makanyuk.utils.Helpers.formatPrice
 import kotlinx.android.synthetic.main.item_home_horizontal.view.*
 
 class HomeAdapter(
-    private val listData: List<HomeModel>,
+    private val listData: List<Data>,
     private val itemAdapterCallback: ItemAdapterCallback
 ) : RecyclerView.Adapter<HomeAdapter.ViewHolder>() {
 
@@ -28,14 +30,19 @@ class HomeAdapter(
     }
 
     interface ItemAdapterCallback {
-        fun onClick(view: View, data: HomeModel)
+        fun onClick(view: View, data: Data)
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun bind(data: HomeModel, itemAdapterCallback: ItemAdapterCallback) {
+        fun bind(data: Data, itemAdapterCallback: ItemAdapterCallback) {
             itemView.apply {
-                tv_title.text = data.title
-                rating_bar_food.rating = data.rating
+                tv_title.text = data.name
+                rating_bar_food.rating = data.rate?.toFloat() ?: 0f
+                tv_price.formatPrice(data.price.toString())
+
+                Glide.with(itemView)
+                    .load(data.picturePath)
+                    .into(iv_poster)
 
                 itemView.setOnClickListener {
                     itemAdapterCallback.onClick(it, data)

@@ -1,6 +1,7 @@
 package com.dev.makanyuk.network
 
 import com.dev.makanyuk.model.response.Wrapper
+import com.dev.makanyuk.model.response.home.HomeResponse
 import com.dev.makanyuk.model.response.login.LoginResponse
 import io.reactivex.Observable
 import okhttp3.MultipartBody
@@ -33,4 +34,7 @@ interface Endpoint {
     fun registerPhoto(
         @Part profileImage: MultipartBody.Part
     ): Observable<Wrapper<Any>>
+
+    @GET("food")
+    fun getHome(): Observable<Wrapper<HomeResponse>>
 }
