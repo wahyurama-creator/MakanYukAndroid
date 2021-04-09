@@ -76,7 +76,7 @@ class HomeFragment : Fragment(), HomeAdapter.ItemAdapterCallback, HomeContract.V
         if (userResponse.profile_photo_url.isNotEmpty()) {
             Glide.with(this)
                 .load(userResponse.profile_photo_url)
-                .apply(RequestOptions().transform(RoundedCorners(35)))
+                .apply(RequestOptions().transform(RoundedCorners(100)))
                 .into(iv_profile)
         }
     }

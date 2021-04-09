@@ -45,7 +45,7 @@ class HomeNewTasteAdapter(
                 tv_subtitle.formatPrice(data.price.toString())
                 rating_bar_food.rating = data.rate?.toFloat() ?: 0f
 
-                Glide.with(itemView)
+                Glide.with(context)
                     .load(data.picturePath)
                     .apply(RequestOptions().transform(RoundedCorners(25)))
                     .into(iv_poster)

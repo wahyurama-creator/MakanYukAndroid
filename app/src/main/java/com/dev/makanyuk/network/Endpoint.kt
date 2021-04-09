@@ -1,6 +1,7 @@
 package com.dev.makanyuk.network
 
 import com.dev.makanyuk.model.response.Wrapper
+import com.dev.makanyuk.model.response.checkout.CheckoutResponse
 import com.dev.makanyuk.model.response.home.HomeResponse
 import com.dev.makanyuk.model.response.login.LoginResponse
 import io.reactivex.Observable
@@ -37,4 +38,14 @@ interface Endpoint {
 
     @GET("food")
     fun getHome(): Observable<Wrapper<HomeResponse>>
+
+    @FormUrlEncoded
+    @POST("checkout")
+    fun checkout(
+        @Field("food_id") foodId: String,
+        @Field("user_id") userId: String,
+        @Field("quantity") quantity: String,
+        @Field("total") total: String,
+        @Field("status") status: String,
+    ): Observable<Wrapper<CheckoutResponse>>
 }

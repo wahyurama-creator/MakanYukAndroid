@@ -32,7 +32,7 @@ class DetailFragment : Fragment(), View.OnClickListener {
         (activity as DetailActivity).toolbarDetail()
 
         arguments?.let {
-            DetailFragmentArgs.fromBundle(it).extraData.let { it1 ->
+            DetailFragmentArgs.fromBundle(it).extraData?.let { it1 ->
                 initView(it1)
             }
         }
